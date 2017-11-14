@@ -1,5 +1,7 @@
 def scrabble_score(str)
+  scrabble = Hash.new()
   if (str == "a" || str == "A")
-    1
+    scrabble.store("a", 1)
   end
+  scrabble.fetch("a")
 end
