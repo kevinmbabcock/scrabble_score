@@ -4,19 +4,19 @@ require('scrabble_score')
 
 describe('scrabble_score') do
 
-  it("all a's have a value of 1") do
+  it("all u's have a value of 1") do
     expect(scrabble_score("u")).to(eq(1))
   end
 
-  it("all d's have a value of 2") do
+  it("all g's have a value of 2") do
     expect(scrabble_score("g")).to(eq(2))
   end
 
-  it("all b's have a value of 3") do
+  it("all m's have a value of 3") do
     expect(scrabble_score("m")).to(eq(3))
   end
 
-  it("all f's have a value of 4") do
+  it("all w's have a value of 4") do
     expect(scrabble_score("w")).to(eq(4))
   end
 
@@ -24,11 +24,11 @@ describe('scrabble_score') do
     expect(scrabble_score("k")).to(eq(5))
   end
 
-  it("all j's have a value of 8") do
+  it("all x's have a value of 8") do
     expect(scrabble_score("x")).to(eq(8))
   end
 
-  it("all q's have a value of 10") do
+  it("all z's have a value of 10") do
     expect(scrabble_score("z")).to(eq(10))
   end
 
