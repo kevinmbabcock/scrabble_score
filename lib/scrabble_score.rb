@@ -1,25 +1,19 @@
 def scrabble_score(str)
   scrabble = Hash.new()
-  if (str == "a" || str == "A")
-    scrabble.store(str, 1)
-  end
-  if (str == "d" || str == "D")
+  if (str == "d" || str == "g")
     scrabble.store(str, 2)
-  end
-  if (str == "b" || str == "B")
+  elsif (str == "b" || str == "c" || str == "m" || str == "p")
     scrabble.store(str, 3)
-  end
-  if (str == "f" || str == "F")
+  elsif (str == "f" || str == "h" || str == "v" || str == "w" || str == "y")
     scrabble.store(str, 4)
-  end
-  if (str == "k" || str == "K")
+  elsif (str == "k")
     scrabble.store(str, 5)
-  end
-  if (str == "j" || str == "J")
+  elsif (str == "j" || str == "x")
     scrabble.store(str, 8)
-  end
-  if (str == "q" || str == "Q")
+  elsif (str == "q" || str == "z")
     scrabble.store(str, 10)
+  else
+    scrabble.store(str, 1)
   end
   scrabble.fetch(str)
 end
