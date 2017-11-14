@@ -1,19 +1,24 @@
 def scrabble_score(str)
+  total = 0
   scrabble = Hash.new()
-  if (str == "d" || str == "g")
-    scrabble.store(str, 2)
-  elsif (str == "b" || str == "c" || str == "m" || str == "p")
-    scrabble.store(str, 3)
-  elsif (str == "f" || str == "h" || str == "v" || str == "w" || str == "y")
-    scrabble.store(str, 4)
-  elsif (str == "k")
-    scrabble.store(str, 5)
-  elsif (str == "j" || str == "x")
-    scrabble.store(str, 8)
-  elsif (str == "q" || str == "z")
-    scrabble.store(str, 10)
-  else
-    scrabble.store(str, 1)
+  letters = str.split(//)
+  letters.each() do |letter|
+    if (letter == "d" || letter == "g")
+      scrabble.store(letter, 2)
+    elsif (letter == "b" || letter == "c" || letter == "m" || letter == "p")
+      scrabble.store(letter, 3)
+    elsif (letter == "f" || letter == "h" || letter == "v" || letter == "w" || letter == "y")
+      scrabble.store(letter, 4)
+    elsif (letter == "k")
+      scrabble.store(letter, 5)
+    elsif (letter == "j" || letter == "x")
+      scrabble.store(letter, 8)
+    elsif (letter == "q" || letter == "z")
+      scrabble.store(letter, 10)
+    else
+      scrabble.store(letter, 1)
+    end
+    total += scrabble.fetch(letter)
   end
-  scrabble.fetch(str)
+  total
 end

@@ -31,4 +31,12 @@ describe('scrabble_score') do
   it("all q's have a value of 10") do
     expect(scrabble_score("z")).to(eq(10))
   end
+
+  it("add up all letters in word") do
+    expect(scrabble_score("dad")).to(eq(5))
+  end
+
+  it("will handle really long and complicated words") do
+    expect(scrabble_score("xylophone")).to(eq(24))
+  end
 end
