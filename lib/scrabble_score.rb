@@ -1,7 +1,10 @@
 def scrabble_score(str)
   scrabble = Hash.new()
   if (str == "a" || str == "A")
-    scrabble.store("a", 1)
+    scrabble.store(str, 1)
   end
-  scrabble.fetch("a")
+  if (str == "d" || str == "D")
+    scrabble.store(str, 2)
+  end
+  scrabble.fetch(str)
 end
